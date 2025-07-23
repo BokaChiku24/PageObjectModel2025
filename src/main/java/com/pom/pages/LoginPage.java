@@ -5,13 +5,13 @@ import org.openqa.selenium.By;
 
 public class LoginPage extends Page {
 
-    public ZooAppPage doLogin(String username, String password) {
+    public ZohoAppPage doLogin(String username, String password) {
         // driver.switchTo().frame("zohoiam");
         driver.findElement(By.id("login_id")).sendKeys(username);
         driver.findElement(By.cssSelector("button#nextbtn")).click();
         driver.findElement(By.id("password")).sendKeys(password);
         driver.findElement(By.cssSelector("button#nextbtn")).click();
-        return new ZooAppPage();
+        return new ZohoAppPage();
 
     }
 

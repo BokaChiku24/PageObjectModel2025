@@ -1,6 +1,6 @@
 package com.pom.base;
 
-import com.pom.accountpages.AccountPage;
+import com.pom.pages.crmpages.accountpages.AccountsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,9 +24,9 @@ public class SideMenu {
 
     }
 
-    public AccountPage goToAccounts(){
+    public AccountsPage goToAccounts(){
         driver.findElement(By.id("lm_module_Accounts")).click();
-        return new AccountPage();
+        return new AccountsPage();
     }
 
     public void goToDeals(){

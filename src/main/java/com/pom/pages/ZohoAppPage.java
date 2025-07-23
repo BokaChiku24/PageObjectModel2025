@@ -1,10 +1,10 @@
 package com.pom.pages;
 
 import com.pom.base.Page;
-import com.pom.crmpages.CRMHomePage;
+import com.pom.pages.crmpages.CRMHomePage;
 import org.openqa.selenium.By;
 
-public class ZooAppPage extends Page {
+public class ZohoAppPage extends Page {
 
     public void goToCliq(){
         driver.findElement(By.cssSelector("div.zl-nth-child1")).click();

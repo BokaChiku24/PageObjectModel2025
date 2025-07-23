@@ -1,23 +1,40 @@
 package com.pom.base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.pom.utilities.ExcelReader;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class Page {
 
     public static WebDriver driver;
+    public static Properties config = new Properties();
+    public static Properties OR = new Properties();
+    public static FileInputStream fis;
+    public static Logger log = Logger.getLogger("devpinoyLogger");
+    public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")
+            + "/src/test/resources/com/excel/testdata.xlsx");
+    public static ExtentReports report;
+    public static WebDriverWait wait;
+    public static ExtentTest test;
+    public static String browserName = "chrome";
     public static SideMenu side;
 
 
     public Page() {
         if(driver==null) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
-                    + "/src/test/resources/com/pom/SeleniumDrivers/chromedriver");
+                    + "/src/test/resources/com/SeleniumDrivers/chromedriver");
             Map<String,Object> prefs = new HashMap<String,Object>();
             prefs.put("profile.default_content_setting_values.notifications", 2);
             prefs.put("credentials_enable_service", false);

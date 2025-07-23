@@ -1,11 +1,11 @@
-package com.pom.accountpages;
+package com.pom.pages.crmpages.accountpages;
 
 import com.pom.base.Page;
 import org.openqa.selenium.By;
 
 import java.time.Duration;
 
-public class AccountPage extends Page {
+public class AccountsPage extends Page {
 
     public CreateAccountPage goToCreateAccount(){
         try {

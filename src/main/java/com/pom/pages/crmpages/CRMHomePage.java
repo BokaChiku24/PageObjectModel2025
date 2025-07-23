@@ -1,4 +1,4 @@
-package com.pom.crmpages;
+package com.pom.pages.crmpages;
 
 import com.pom.base.Page;
 

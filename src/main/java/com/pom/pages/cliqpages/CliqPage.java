@@ -1,4 +1,4 @@
-package com.pom.cliqpages;
+package com.pom.pages.cliqpages;
 
 import com.pom.base.Page;
 import org.openqa.selenium.By;
