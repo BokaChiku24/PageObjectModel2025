@@ -23,7 +23,7 @@ public class Page {
     public static FileInputStream fis;
     public static Logger log = Logger.getLogger("devpinoyLogger");
     public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")
-            + "/src/test/resources/com/excel/testdata.xlsx");
+            + "/src/test/resources/com/pom/excel/testdata.xlsx");
     public static ExtentReports report;
     public static WebDriverWait wait;
     public static ExtentTest test;
@@ -34,7 +34,7 @@ public class Page {
     public Page() {
         if(driver==null) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
-                    + "/src/test/resources/com/SeleniumDrivers/chromedriver");
+                    + "/src/test/resources/com/pom/SeleniumDrivers/chromedriver");
             Map<String,Object> prefs = new HashMap<String,Object>();
             prefs.put("profile.default_content_setting_values.notifications", 2);
             prefs.put("credentials_enable_service", false);
