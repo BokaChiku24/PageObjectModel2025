@@ -13,8 +13,9 @@ public class HomePage extends Page {
         driver.findElement(By.cssSelector(".signup")).click();
     }
 
-    public void goToLogin() {
+    public LoginPage goToLogin() {
         driver.findElement(By.className("zgh-login")).click();
+        return new LoginPage();
     }
 
     public void goToZohoEducation() {
