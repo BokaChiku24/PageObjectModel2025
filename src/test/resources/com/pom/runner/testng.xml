@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-
-
-	<listeners>
-	<listener class-name="com.kunal.extentlisteners.ExtentListeners" />
-		</listeners>
-
-
-  <test name="Bank Manager Login Test">
-    <classes>
-      <class name="com.kunal.testcases.BankManagerLoginTest"/>
-
-    </classes>
-  </test> 
+<suite name="Page Object Model">
     
-  <test name="Add Customer Test">
-    <classes>
-      <class name="com.kunal.testcases.AddCustomerTest"/>
-
-    </classes>
-  </test> 
-  
-  <test name="Open Account Test">
-    <classes>
-      <class name="com.kunal.testcases.OpenAccountTest"/>
-
-    </classes>
-  </test> 
-  
-</suite> 
+    <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+       <listener class-name="com.pom.listeners.CustomListeners"/>
+  </listeners>
+    
+    
+	<test name="Login Test">
+		<classes>
+			<class name="com.pom.testcases.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	
+	<test name="Create Account Test">
+		<classes>
+			<class name="com.pom.testcases.CreateAccountTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	
+</suite> <!-- Suite -->
