@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Page Object Model" parallel="tests" thread-count="2">
+<suite name="Page Object Model" parallel="tests" thread-count="1">
 
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
         <listener class-name="com.pom.extentlisteners.ExtentListeners"/>
     </listeners>
+
+    <test name="Login Test">
+        <classes>
+            <class name="com.pom.testcases.LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
 
     <test name="Create Account Test">
         <classes>

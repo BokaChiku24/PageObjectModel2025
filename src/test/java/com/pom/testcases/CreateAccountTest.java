@@ -11,9 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Hashtable;
 
-public class CreateAccountTest {
-
-
+public class CreateAccountTest extends BaseTest {
 	
 	@Test(dataProviderClass=Utilities.class,dataProvider="dp")
 	public void createAccountTest(Hashtable<String,String> data){
@@ -25,7 +23,6 @@ public class CreateAccountTest {
 		CreateAccountPage cap = account.goToCreateAccount();
 		cap.createAccount(data.get("accountname"));
 		//Assert.fail("Create account test failed");
-		
 	}
 
 }
