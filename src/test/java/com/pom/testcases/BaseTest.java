@@ -1,12 +1,12 @@
 package com.pom.testcases;
 
 import com.pom.base.Page;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 
 public class BaseTest {
 	
 	
-	@AfterSuite
+	@AfterTest
 	public void tearDown(){
 		
 		Page.driver.quit();

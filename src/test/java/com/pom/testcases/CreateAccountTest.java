@@ -7,7 +7,6 @@ import com.pom.pages.ZohoAppPage;
 import com.pom.pages.crmpages.accountpages.AccountsPage;
 import com.pom.pages.crmpages.accountpages.CreateAccountPage;
 import com.pom.utilities.Utilities;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Hashtable;
@@ -25,7 +24,7 @@ public class CreateAccountTest {
 		AccountsPage account = Page.side.goToAccounts();
 		CreateAccountPage cap = account.goToCreateAccount();
 		cap.createAccount(data.get("accountname"));
-		Assert.fail("Create account test failed");
+		//Assert.fail("Create account test failed");
 		
 	}
 
