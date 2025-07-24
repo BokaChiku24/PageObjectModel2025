@@ -30,6 +30,4 @@ public class DataUtil extends Page {
 
 		return data;
 	}
-	
-
 }

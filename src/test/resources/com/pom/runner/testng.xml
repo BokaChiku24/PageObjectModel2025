@@ -5,7 +5,7 @@
     <listeners>
       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-       <listener class-name="com.pom.listeners.CustomListeners"/>
+		<listener class-name="com.pom.extentlisteners.ExtentListeners"></listener>
   </listeners>
     
     
@@ -21,6 +21,4 @@
 			<class name="com.pom.testcases.CreateAccountTest" />
 		</classes>
 	</test> <!-- Test -->
-	
-	
 </suite> <!-- Suite -->

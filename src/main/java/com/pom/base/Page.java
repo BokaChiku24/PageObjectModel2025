@@ -1,6 +1,5 @@
 package com.pom.base;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.pom.extentlisteners.ExtentListeners;
@@ -35,7 +34,6 @@ public class Page {
     public static Logger log = Logger.getLogger("devpinoyLogger");
     public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir")
             + "/src/test/resources/com/pom/excel/testdata.xlsx");
-    public static ExtentReports report;
     public static WebDriverWait wait;
     public static ExtentTest test;
     public static String browserName = "chrome";

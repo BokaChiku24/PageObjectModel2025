@@ -2,16 +2,10 @@ package com.pom.listeners;
 
 import com.aventstack.extentreports.Status;
 import com.pom.base.Page;
-import com.pom.utilities.MonitoringMail;
-import com.pom.utilities.TestConfig;
 import com.pom.utilities.Utilities;
 import org.testng.*;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 public class CustomListeners extends Page implements ITestListener, ISuiteListener {
 
@@ -20,13 +14,14 @@ public class CustomListeners extends Page implements ITestListener, ISuiteListen
 	public void onTestStart(ITestResult result) {
 		// not implemented
 		Reporter.log("Test case start: " + result.getMethod().getMethodName());
-		test = report.createTest(result.getName().toUpperCase());
+		//test = report.createTest(result.getName().toUpperCase());
 
 
 		  // Run modes - Y/N
 		if(!Utilities.isTestRunnable(result.getName(),excel)) {
 		  throw new SkipException("Skipping the test" + result.getName().toUpperCase()
-		  + " as run mode is set to No"); }
+		  + " as run mode is set to No");
+		}
 
 
 	}
@@ -35,7 +30,7 @@ public class CustomListeners extends Page implements ITestListener, ISuiteListen
 		// not implemented
 		Reporter.log("Test case finished: " + result.getMethod().getMethodName());
 		test.log(Status.PASS, result.getName().toUpperCase() + " : Pass");
-		report.flush();
+		//report.flush();
 
 	}
 
@@ -62,7 +57,7 @@ public class CustomListeners extends Page implements ITestListener, ISuiteListen
 	public void onTestSkipped(ITestResult result) {
 		// not implemented
 		test.log(Status.SKIP, result.getName().toUpperCase() + " Skipped the test case");
-		report.flush();
+		//report.flush();
 	}
 
 	public void onStart(ITestContext context) {
@@ -79,7 +74,9 @@ public class CustomListeners extends Page implements ITestListener, ISuiteListen
 
 
 	public void onFinish(ISuite suite) {
+		//report.flush();
 		// not implemented
+		/*
 		MonitoringMail mail = new MonitoringMail();
 
 		try {
@@ -99,5 +96,7 @@ public class CustomListeners extends Page implements ITestListener, ISuiteListen
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+		 */
 	}
 }
